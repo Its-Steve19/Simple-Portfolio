@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Main Container */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #e8f4f8;
+        }
+
+        main, #contact {
+            width: 90%;
+            max-width: 600px;
+            margin: 1.5em auto;
+            padding: 2em;
+            background: #ffffff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* Main Heading */
+        h1, h2 {
+            text-align: center;
+            color: #00509e;
+            margin-bottom: 1em;
+            font-size: 1.8em;
+        }
+
+        /* Intro Text */
+        main p {
+            text-align: center;
+            color: #333;
+            font-size: 1.1em;
+            margin-bottom: 1em;
+        }
+
+        /* Contact List */
+        ul {
+            list-style: none;
+            margin-bottom: 2em;
+            padding-left: 1.5em;
+            text-align: center;
+        }
+
+        ul li {
+            font-size: 1em;
+            color: #00509e;
+            margin: 0.5em 0;
+        }
+
+        /* Contact Section Styling */
+        #contact p {
+            font-size: 1em;
+            color: #444;
+            margin-bottom: 1em;
+            text-align: center;
+        }
+
+        /* Form Styles */
+        #contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8em;
+        }
+
+        label {
+            font-size: 0.9em;
+            color: #333;
+            margin-bottom: 0.3em;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            padding: 0.8em;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 1em;
+            width: 100%;
+            transition: border-color 0.3s;
+            background-color: #f9f9f9;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #00509e;
+            background-color: #fff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 80, 158, 0.2);
+        }
+
+        /* Button Styles */
+        button[type="submit"] {
+            padding: 0.8em;
+            background-color: #00509e;
+            color: white;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0066cc;
+            transform: translateY(-2px);
+            box-shadow: 0px 4px 8px rgba(0, 102, 204, 0.3);
+        }
+
+        /* Divider Line */
+        #contact h2::after {
+            content: '';
+            display: block;
+            margin: 0.5em auto;
+            width: 50px;
+            height: 3px;
+            background-color: #00509e;
+            border-radius: 2px;
+        }
+
+        /* Hover Effect for List Items */
+        ul li:hover {
+            color: #0066cc;
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            main, #contact {
+                padding: 1.5em;
+            }
+
+            h1, h2 {
+                font-size: 1.5em;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            textarea {
+                font-size: 1em;
+            }
+
+            button[type="submit"] {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Contact Me</h1>
+        <p>If you would like to reach out, you can contact me at:</p>
+        <ul>
+            <li>Email: carringtonenakitari@gmail.com</li>
+            <li>Phone: 0716015632</li>
+        </ul>
+    </main>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: carringtonenakitari@gmail.com</p>
+        <p>Phone: 0716015632</p>
+        <p>Location: Nyeri, Kenya</p>
+        <p>If you'd like to get in touch, feel free to send me a message below:</p>
+
+        <form id="contact-form" action="#" method="POST">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Type your message here" rows="6" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+</body>
+</html>
